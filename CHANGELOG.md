@@ -35,6 +35,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added "Handling Duplicate Records" with three management strategies
 - Added "Common Editing Tasks" reference (adding/removing/reordering fields, modifying validation)
 
+#### Glossary & Technical Reference
+- Added comprehensive glossary section to `technical-reference.md`
+- Defined 7 key technical terms with explanations and cross-references:
+  - CDN Caching
+  - Domain Authentication
+  - Form Capture
+  - Journey ID
+  - Rate Limiting
+  - Logical Name
+  - Target Audience
+- Added Table of Contents to `technical-reference.md` for easier navigation
+- Improved structure and organization of 330+ line technical document
+
+#### Cross-References
+- Added hyperlinks from technical terms throughout documentation to glossary
+- Linked journey-id references in `overview.md` to glossary
+- Linked domain authentication references in `form-capture.md` to glossary
+- Linked cache bypass parameter references to detailed explanation
+- Linked CDN, domain authentication, and rate limiting in FAQ to glossary
+- Added links to Key Concepts section in README.md
+
 ### Fixed
 - Improved documentation structure for easier maintenance
 - Enhanced navigation with consistent cross-references
