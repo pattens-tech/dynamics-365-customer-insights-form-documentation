@@ -12,6 +12,10 @@
 - Because the form is cached on a CDN, changes may take up to 10 minutes to reflect on the live page
 - To see changes immediately for testing, use the Dynamics 365 Form Debugger: https://pattens.tech/dynamics-365-form-debugger
 
+<a href="https://microsoftedge.microsoft.com/addons/detail/dynamics-365-form-debugge/ceoaoafhphcpdokfdfkiilmndbepbbec">
+  <img width="300" alt="English_Get it from Microsoft Edge" src="https://github.com/user-attachments/assets/28f14c7c-a752-4fd0-9bc4-1c6da358adee" />
+</a>
+
 ## Creating a Copy
 
 If you prefer not to edit the live form directly:
