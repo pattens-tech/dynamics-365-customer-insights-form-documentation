@@ -117,6 +117,6 @@ D365 Forms include:
 
 ## Version
 
-**Documentation Version**: 1.0.0  
-**Last Updated**: October 2025  
+**Documentation Version**: 1.1.0
+**Last Updated**: October 2025
 **D365 Version Compatibility**: Customer Insights - Journeys (all versions)

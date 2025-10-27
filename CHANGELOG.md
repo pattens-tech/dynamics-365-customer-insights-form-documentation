@@ -6,6 +6,42 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.0] - 2025-10-27
+
+### Changed - Structure & Consistency Improvements
+
+#### Style & Formatting
+- Removed all emojis from README.md for more professional tone
+- Standardized "Related Resources" section naming across all documentation files
+- Improved heading consistency throughout documentation
+
+#### Content Organization
+- Moved "Common Technical Issues" section from `technical-reference.md` to `troubleshooting.md` (90+ lines)
+- Better separation of concerns: technical reference now focuses on structure/implementation, troubleshooting focuses on problem-solving
+- Reduced technical-reference.md from 422 lines to 331 lines for better readability
+
+#### Navigation Improvements
+- Added "Related Resources" section to `getting-started/overview.md`
+- Standardized all navigation sections to use "Related Resources" instead of mixed "Next Steps" and "Related Guides"
+- Enhanced cross-referencing between related documents
+
+### Added - Content Enhancements
+
+#### Editing Forms Guide
+- Significantly expanded `guides/editing-forms.md` from 24 lines to 148 lines
+- Added "Testing Changes Safely" section with cache bypass parameter usage
+- Added "Unpublishing a Form" workflow
+- Added "Managing Form Versions" with version control best practices
+- Added "Handling Duplicate Records" with three management strategies
+- Added "Common Editing Tasks" reference (adding/removing/reordering fields, modifying validation)
+
+### Fixed
+- Improved documentation structure for easier maintenance
+- Enhanced navigation with consistent cross-references
+- Better discoverability of related content
+
+---
+
 ## [1.0.0] - 2025-10-27
 
 ### Added - Initial Release
