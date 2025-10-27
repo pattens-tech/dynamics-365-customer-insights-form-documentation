@@ -17,7 +17,7 @@ Use form capture when:
 ## Prerequisites
 
 - Solution version 1.1.35355 or higher
-- Domain must be enabled for external form hosting
+- [Domain authentication](../reference/technical-reference.md#domain-authentication) must be enabled for external form hosting
 - Form capture feature enabled in settings
 
 ## Enabling Form Capture
@@ -79,6 +79,8 @@ fieldMapping: {
 ## Domain Authentication
 
 Your domain must be enabled for external form hosting in **Settings > Domain Authentication**.
+
+See [Domain Authentication glossary entry](../reference/technical-reference.md#domain-authentication) for detailed setup instructions.
 
 ## Related Resources
 

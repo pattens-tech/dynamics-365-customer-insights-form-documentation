@@ -68,7 +68,7 @@ Place this JavaScript below your form embed script on your website.
 - Keep images under 200KB
 - Use 64x64px to 128x128px for icons
 - PNG with transparency looks professional
-- Test with `#d365mkt-nocache` first
+- Test with [`#d365mkt-nocache`](../guides/editing-forms.md#using-the-cache-bypass-parameter) first to bypass CDN caching
 
 ## Related Resources
 

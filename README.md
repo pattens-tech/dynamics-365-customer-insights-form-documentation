@@ -67,10 +67,10 @@ Quick reference and troubleshooting:
 
 ### Key Concepts
 
-- **Form Capture**: Integrate external forms without rebuilding them in D365
-- **CDN Caching**: Forms are cached globally; changes take up to 10 minutes
-- **Domain Authentication**: Required for forms to work on your domain
-- **Rate Limiting**: 2,000 requests/minute per organization
+- **[Form Capture](guides/form-capture.md)**: Integrate external forms without rebuilding them in D365
+- **[CDN Caching](reference/technical-reference.md#cdn-caching)**: Forms are cached globally; changes take up to 10 minutes
+- **[Domain Authentication](reference/technical-reference.md#domain-authentication)**: Required for forms to work on your domain
+- **[Rate Limiting](reference/technical-reference.md#rate-limiting)**: 2,000 requests/minute per organization
 
 ---
 

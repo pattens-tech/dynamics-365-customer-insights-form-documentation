@@ -34,9 +34,9 @@ D365 Forms include:
 
 ### Why aren't my form changes showing up?
 
-Forms are cached on a CDN. Changes take up to 10 minutes to propagate.
+Forms are cached on a [CDN](technical-reference.md#cdn-caching). Changes take up to 10 minutes to propagate.
 
-**Quick testing**: Append `#d365mkt-nocache` to your form URL (don't share publicly).
+**Quick testing**: Append [`#d365mkt-nocache`](../guides/editing-forms.md#using-the-cache-bypass-parameter) to your form URL (don't share publicly).
 
 ### How do I unpublish a form?
 
@@ -67,7 +67,7 @@ Common causes:
 
 Your domain isn't enabled for external form hosting.
 
-**Solution**: Go to **Settings > Domain Authentication** and add your domain.
+**Solution**: Go to **Settings > Domain Authentication** and add your domain. See [Domain Authentication](technical-reference.md#domain-authentication) for details.
 
 ### How do I enable Form Capture?
 
@@ -106,6 +106,8 @@ See [Customize Submission Images](../how-to/customize-submission-images.md)
 
 - 2,000 requests per minute per organization
 - Translates to 100-500 valid submissions per minute
+
+See [Rate Limiting](technical-reference.md#rate-limiting) for more details.
 
 ### How many fields should a form have?
 

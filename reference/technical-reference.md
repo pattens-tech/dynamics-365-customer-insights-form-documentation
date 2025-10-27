@@ -10,6 +10,107 @@ This technical documentation provides in-depth details on how Dynamics 365 Custo
 
 ---
 
+## Table of Contents
+
+1. [Glossary](#glossary)
+   - [CDN Caching](#cdn-caching)
+   - [Domain Authentication](#domain-authentication)
+   - [Form Capture](#form-capture)
+   - [Journey ID](#journey-id)
+   - [Rate Limiting](#rate-limiting)
+   - [Logical Name](#logical-name)
+   - [Target Audience](#target-audience)
+2. [Form Element Types](#form-element-types)
+3. [Default Form Fields](#default-form-fields)
+4. [Form Structure Requirements](#form-structure-requirements)
+   - [Header Structure](#header-structure)
+   - [Body Structure (Form)](#body-structure-form)
+   - [Body Structure (Thank You Modal)](#body-structure-thank-you-modal)
+5. [Advanced Styling with Tailwind CSS](#advanced-styling-with-tailwind-css)
+   - [Typography Guidelines](#typography-guidelines)
+   - [Color System](#color-system)
+   - [Spacing Conventions](#spacing-conventions)
+   - [Layout Standards](#layout-standards)
+6. [Accessibility Requirements](#accessibility-requirements)
+   - [Core Principles](#core-principles)
+   - [Accessibility Checklist](#accessibility-checklist)
+
+---
+
+## Glossary
+
+### CDN Caching
+**Content Delivery Network (CDN) Caching** refers to how D365 forms are distributed globally for fast loading. When you publish or edit a form, changes are cached across Microsoft's CDN servers worldwide. This means:
+- Changes take **up to 10 minutes** to propagate globally
+- Forms load faster for end users
+- You can bypass caching for testing using `#d365mkt-nocache` parameter
+
+**Learn more**: [Editing Forms - Testing Changes Safely](../guides/editing-forms.md#testing-changes-safely)
+
+### Domain Authentication
+**Domain Authentication** is the process of authorizing specific domains to host and submit D365 forms. For security, forms only work on pre-approved domains.
+
+**Setup location**: Settings > Domain Authentication
+
+**Requirements**:
+- Add your domain to the allowed list
+- Complete DNS verification
+- Allow 24 hours for propagation
+
+**Note**: Microsoft's built-in hosting domain is pre-approved by default.
+
+**Learn more**: [Troubleshooting - CORS Errors](troubleshooting.md#cors-errors)
+
+### Form Capture
+**Form Capture** allows you to connect existing HTML forms (not built in D365) to Dynamics 365 Customer Insights. Instead of rebuilding your form, you add a capture script that maps your form fields to D365 attributes.
+
+**Use cases**:
+- Existing forms with complex custom logic
+- Forms that send data to multiple systems
+- Gradual migration to D365
+
+**Requirements**: Solution version 1.1.35355 or higher
+
+**Learn more**: [Form Capture Guide](../guides/form-capture.md)
+
+### Journey ID
+**Journey ID** is a unique identifier used to track form interactions and link them to specific customer journeys in D365. Forms use this ID instead of cookies to:
+- Identify known users
+- Track form visits and submissions
+- Connect form data to customer journey analytics
+
+**Privacy note**: No cookies are used; journey-id is passed as a parameter.
+
+### Rate Limiting
+**Rate Limiting** is a security measure that restricts the number of form requests to prevent abuse and DDoS attacks.
+
+**Current limits**:
+- **2,000 requests per minute** per organization
+- Translates to approximately 100-500 valid submissions per minute
+
+**When exceeded**: Additional requests are temporarily blocked. Consider implementing client-side throttling for high-traffic forms.
+
+**Learn more**: [Troubleshooting - Rate Limit Exceeded](troubleshooting.md#form-not-accepting-submissions)
+
+### Logical Name
+**Logical Name** is the internal database field name in Dynamics 365 (e.g., `emailaddress1` for the email field, `firstname` for first name). When mapping form fields, you must use the exact logical name, which is case-sensitive.
+
+**Finding logical names**: Settings > Customizations > Entities > Fields
+
+**Common logical names**:
+- Email: `emailaddress1`
+- Phone: `telephone1` or `mobilephone`
+- Company: `companyname`
+
+### Target Audience
+**Target Audience** refers to the D365 entity (e.g., Contact, Lead) that form submissions will create or update. This is specified using the `data-targetaudience` attribute in form HTML.
+
+**Common values**:
+- `contact` - For contact records
+- `lead` - For lead records
+
+---
+
 ## Form Element Types
 
 ### Required Form Elements

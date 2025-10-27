@@ -20,7 +20,7 @@ Keeping your marketing and event forms secure is a key priority in Customer Insi
 
 ## Privacy & Cookies
 
-Marketing and event registration forms don't use any cookies. Form visit and form submit interactions use a journey-id to get details about known users.
+Marketing and event registration forms don't use any cookies. Form visit and form submit interactions use a [journey-id](../reference/technical-reference.md#journey-id) to get details about known users.
 
 ## Best Practices
 
