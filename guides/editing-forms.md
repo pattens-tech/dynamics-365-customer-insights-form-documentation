@@ -10,8 +10,7 @@
 ### Important Notes on Caching
 
 - Because the form is cached on a CDN, changes may take up to 10 minutes to reflect on the live page
-- To see changes immediately for testing, append `#d365mkt-nocache` to the form URL
-- **Do not use the nocache URL publicly** - it bypasses CDN optimization
+- To see changes immediately for testing, use the Dynamics 365 Form Debugger: https://pattens.tech/dynamics-365-form-debugger
 
 ## Creating a Copy
 
