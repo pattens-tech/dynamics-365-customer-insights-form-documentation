@@ -2,13 +2,9 @@
 
 ## Overview
 
-Form capture allows you to capture submissions from existing forms that weren't created using the Customer Insights - Journeys form editor.
+Form capture connects existing HTML forms to D365 without rebuilding them in the form editor.
 
-This feature is recommended if your existing form sends data to multiple systems or contains complex logic.
-
-## When to Use Form Capture
-
-Use form capture when:
+**When to use:**
 - Your form sends data to multiple systems
 - Your form has complex custom logic
 - You want to keep your existing form design

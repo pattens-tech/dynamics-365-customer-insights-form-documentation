@@ -1,12 +1,12 @@
 # Customize Form Submission Images
 
-## The Problem
+## Overview
 
-When someone submits a form in D365 Marketing, you can show a confirmation message. However, it displays a generic green checkmark icon that you can't change through normal settings.
+Form submissions display a generic green checkmark icon that cannot be changed through standard settings.
 
-## The Solution
+## Implementation
 
-You can customize or hide this icon by adding CSS code to your form's HTML.
+Customize or hide the submission icon by adding CSS code to your form's HTML.
 
 ## Option 1: Hide the Icon Completely
 

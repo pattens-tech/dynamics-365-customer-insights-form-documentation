@@ -4,31 +4,21 @@
 
 ### What is form capture?
 
-Form capture lets you capture submissions from existing forms and map them to Dynamics 365 without using the native form editor.
+Form capture connects existing HTML forms to D365 without rebuilding them in the form editor.
 
-### When should I use Form Capture vs. native forms?
-
-**Use Form Capture when:**
-- Your form sends data to multiple systems
-- Your form has complex custom logic
-- You want to keep your existing form design
-
-**Use Native Forms when:**
-- Starting fresh with D365
-- You want full integration with Customer Insights
-- You need built-in analytics
+See the [Form Capture guide](../guides/form-capture.md) for detailed setup instructions and use cases.
 
 ### Do D365 Forms use cookies?
 
-No. Marketing and event registration forms don't use cookies. Form interactions use a journey-id to identify known users.
+No. Forms use a [journey-id](technical-reference.md#journey-id) instead of cookies to identify known users.
+
+See [Overview - Privacy & Cookies](../getting-started/overview.md#privacy--cookies) for details.
 
 ### How secure are Forms in Dynamics 365?
 
-D365 Forms include:
-- Approved domains only
-- Bot protection (CAPTCHA)
-- Traffic control (2,000 requests/minute)
-- Data encryption in transit
+Forms include domain authentication, bot protection (CAPTCHA), rate limiting, and data encryption.
+
+See [Overview - Security Features](../getting-started/overview.md#security-features) for complete details.
 
 ## Publishing & Caching
 
