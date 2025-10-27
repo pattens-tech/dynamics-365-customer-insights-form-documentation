@@ -2,7 +2,7 @@
 
 ## Overview
 
-Learn how to effectively create and deploy forms in D365 Customer Insights to capture customer data and manage preferences across your marketing campaigns.
+Create and deploy forms to capture customer data in D365 Customer Insights.
 
 ## Step-by-Step Guide
 

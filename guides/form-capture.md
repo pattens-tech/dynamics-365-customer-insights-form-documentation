@@ -2,13 +2,9 @@
 
 ## Overview
 
-Form capture allows you to capture submissions from existing forms that weren't created using the Customer Insights - Journeys form editor.
+Form capture connects existing HTML forms to D365 without rebuilding them in the form editor.
 
-This feature is recommended if your existing form sends data to multiple systems or contains complex logic.
-
-## When to Use Form Capture
-
-Use form capture when:
+**When to use:**
 - Your form sends data to multiple systems
 - Your form has complex custom logic
 - You want to keep your existing form design
@@ -17,7 +13,7 @@ Use form capture when:
 ## Prerequisites
 
 - Solution version 1.1.35355 or higher
-- Domain must be enabled for external form hosting
+- [Domain authentication](../reference/technical-reference.md#domain-authentication) must be enabled for external form hosting
 - Form capture feature enabled in settings
 
 ## Enabling Form Capture
@@ -79,6 +75,8 @@ fieldMapping: {
 ## Domain Authentication
 
 Your domain must be enabled for external form hosting in **Settings > Domain Authentication**.
+
+See [Domain Authentication glossary entry](../reference/technical-reference.md#domain-authentication) for detailed setup instructions.
 
 ## Related Resources
 

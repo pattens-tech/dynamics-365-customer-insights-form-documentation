@@ -4,39 +4,29 @@
 
 ### What is form capture?
 
-Form capture lets you capture submissions from existing forms and map them to Dynamics 365 without using the native form editor.
+Form capture connects existing HTML forms to D365 without rebuilding them in the form editor.
 
-### When should I use Form Capture vs. native forms?
-
-**Use Form Capture when:**
-- Your form sends data to multiple systems
-- Your form has complex custom logic
-- You want to keep your existing form design
-
-**Use Native Forms when:**
-- Starting fresh with D365
-- You want full integration with Customer Insights
-- You need built-in analytics
+See the [Form Capture guide](../guides/form-capture.md) for detailed setup instructions and use cases.
 
 ### Do D365 Forms use cookies?
 
-No. Marketing and event registration forms don't use cookies. Form interactions use a journey-id to identify known users.
+No. Forms use a [journey-id](technical-reference.md#journey-id) instead of cookies to identify known users.
+
+See [Overview - Privacy & Cookies](../getting-started/overview.md#privacy--cookies) for details.
 
 ### How secure are Forms in Dynamics 365?
 
-D365 Forms include:
-- Approved domains only
-- Bot protection (CAPTCHA)
-- Traffic control (2,000 requests/minute)
-- Data encryption in transit
+Forms include domain authentication, bot protection (CAPTCHA), rate limiting, and data encryption.
+
+See [Overview - Security Features](../getting-started/overview.md#security-features) for complete details.
 
 ## Publishing & Caching
 
 ### Why aren't my form changes showing up?
 
-Forms are cached on a CDN. Changes take up to 10 minutes to propagate.
+Forms are cached on a [CDN](technical-reference.md#cdn-caching). Changes take up to 10 minutes to propagate.
 
-**Quick testing**: Append `#d365mkt-nocache` to your form URL (don't share publicly).
+**Quick testing**: Append [`#d365mkt-nocache`](../guides/editing-forms.md#using-the-cache-bypass-parameter) to your form URL (don't share publicly).
 
 ### How do I unpublish a form?
 
@@ -67,7 +57,7 @@ Common causes:
 
 Your domain isn't enabled for external form hosting.
 
-**Solution**: Go to **Settings > Domain Authentication** and add your domain.
+**Solution**: Go to **Settings > Domain Authentication** and add your domain. See [Domain Authentication](technical-reference.md#domain-authentication) for details.
 
 ### How do I enable Form Capture?
 
@@ -106,6 +96,8 @@ See [Customize Submission Images](../how-to/customize-submission-images.md)
 
 - 2,000 requests per minute per organization
 - Translates to 100-500 valid submissions per minute
+
+See [Rate Limiting](technical-reference.md#rate-limiting) for more details.
 
 ### How many fields should a form have?
 
