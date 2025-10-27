@@ -34,7 +34,7 @@ For more control beyond the theme panel:
 }
 ```
 
-## Next Steps
+## Related Resources
 
-- [Advanced customization](advanced-customization.md) with JavaScript
-- Customize [submission images](../how-to/customize-submission-images.md)
+- [Advanced Customization](advanced-customization.md)
+- [Customize Submission Images](../how-to/customize-submission-images.md)

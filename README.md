@@ -2,7 +2,7 @@
 
 Comprehensive documentation for creating, customizing, and managing forms in Dynamics 365 Customer Insights - Journeys.
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Getting Started](#getting-started)
 - [Guides](#guides)
@@ -12,7 +12,7 @@ Comprehensive documentation for creating, customizing, and managing forms in Dyn
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 New to D365 forms? Start here:
 
@@ -21,7 +21,7 @@ New to D365 forms? Start here:
 
 ---
 
-## 📖 Guides
+## Guides
 
 Detailed guides for working with forms:
 
@@ -32,7 +32,7 @@ Detailed guides for working with forms:
 
 ---
 
-## 🛠️ How-To Articles
+## How-To Articles
 
 Task-focused solutions for specific scenarios:
 
@@ -41,7 +41,7 @@ Task-focused solutions for specific scenarios:
 
 ---
 
-## 📋 Reference
+## Reference
 
 Quick reference and troubleshooting:
 
@@ -51,7 +51,7 @@ Quick reference and troubleshooting:
 
 ---
 
-## 🔗 Quick Links
+## Quick Links
 
 ### Common Tasks
 
@@ -74,18 +74,18 @@ Quick reference and troubleshooting:
 
 ---
 
-## 🔒 Security Features
+## Security Features
 
 D365 Forms include:
-- ✅ Approved domains only
-- ✅ Bot protection (CAPTCHA)
-- ✅ Traffic control (rate limiting)
-- ✅ Data encryption in transit
-- ✅ No cookies used for tracking
+- Approved domains only
+- Bot protection (CAPTCHA)
+- Traffic control (rate limiting)
+- Data encryption in transit
+- No cookies used for tracking
 
 ---
 
-## 🎯 Best Practices
+## Best Practices
 
 ### Performance
 - Keep forms short (5-7 fields maximum)
@@ -107,7 +107,7 @@ D365 Forms include:
 
 ---
 
-## 📞 Support
+## Support
 
 - **Official Docs**: https://docs.microsoft.com/dynamics365/marketing
 - **Community Forum**: https://community.dynamics.com
@@ -115,7 +115,7 @@ D365 Forms include:
 
 ---
 
-## 📄 Version
+## Version
 
 **Documentation Version**: 1.0.0  
 **Last Updated**: October 2025  

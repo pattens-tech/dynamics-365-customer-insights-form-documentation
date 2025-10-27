@@ -67,7 +67,7 @@ Configure styling, validation rules, and default audience settings.
 - Test thoroughly before sharing
 - Review quarterly for updates
 
-## Related Guides
+## Related Resources
 
 - [Creating Your First Form](../getting-started/creating-your-first-form.md)
 - [Styling Forms](../guides/styling-forms.md)
