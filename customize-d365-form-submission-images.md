@@ -136,18 +136,3 @@ document.addEventListener("d365mkt-afterformsubmit", function(event) {
 - `3000` = 3 seconds
 - Change to whatever works best for your users
 
-### For Outbound Marketing Forms
-
-If you're using older Outbound Marketing forms instead of Real-time Marketing, use this instead:
-
-```javascript
-<script>
-MsCrmMkt.MsCrmFormLoader.on('formSubmit', function(event) {
-  setTimeout(function() {
-    window.location.href = "/blog"; // Replace with your URL
-  }, 10000); // Time in milliseconds
-});
-</script>
-```
-
-The difference is just the event listener name - everything else works the same way.
