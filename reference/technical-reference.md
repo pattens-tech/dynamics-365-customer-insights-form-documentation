@@ -1,16 +1,18 @@
-# Dynamics 365 Customer Insights - Technical Documentation
+# Technical Reference
 
-This in-depth documentation aims to provide the technical background to how the forms work and what are the basic requirements for creating and using forms used in Dynamics 365.
+## Overview
+
+This technical documentation provides in-depth details on how Dynamics 365 Customer Insights forms work, including requirements, structure, and implementation details.
 
 ### Complete Form Example
 
-[View](https://pattens-tech.github.io/dynamics-365-forms/templates/contact-form.html)
+[View Complete Example](https://pattens-tech.github.io/dynamics-365-forms/templates/contact-form.html)
 
+---
 
+## Form Element Types
 
-### Form element types
-
-Complete list of available form elements:
+### Required Form Elements
 
 | Element | `data-editorblocktype` | Purpose |
 |---------|----------------------|---------|
@@ -19,16 +21,23 @@ Complete list of available form elements:
 | Checkbox | `Field-checkbox` | Checkbox field |
 | Submit button | `SubmitButtonBlock` | Form submission (required) |
 
-Optional form elements:
+### Optional Form Elements
 
+| Element | `data-editorblocktype` | Purpose |
+|---------|----------------------|---------|
 | Custom field | `Field-{name}` | Any CRM field (use logical name) |
 | Subscription list | `SubscriptionListBlock` | Subscription options |
 | Captcha | `CaptchaBlock` | Captcha verification |
 | Reset button | `ResetButtonBlock` | Form reset |
 | Forward to friend | `ForwardToFriendBlock` | Forward functionality |
 
-### Default form fields for Contacts & Leads
-These may differ depending on if you have customized your Dynamics 365 instance.
+---
+
+## Default Form Fields
+
+### Contacts & Leads
+
+These may differ depending on your D365 customizations:
 
 | Field | Logical name |
 |-------|--------------|
@@ -42,7 +51,8 @@ These may differ depending on if you have customized your Dynamics 365 instance.
 | Lead / Company name | companyname |
 
 ### Field Properties
-Each form field supports the following properties:
+
+Each form field supports:
 
 | Property | Description | Example |
 |----------|-------------|---------|
@@ -52,9 +62,11 @@ Each form field supports the following properties:
 | Validation | Input validation rule | Custom RegExp |
 | Hidden | Hide field from view | true/false |
 
-## Requirements
+---
 
-Both the header structure and body structure are required in each form in order to function. 
+## Form Structure Requirements
+
+Both header and body structures are required for forms to function:
 
 ```
 ├─→ Entire file
@@ -64,7 +76,7 @@ Both the header structure and body structure are required in each form in order 
 │   └─→ Body (Thank you modal)
 ```
 
-### Header
+### Header Structure
 
 ```html
 <!DOCTYPE html>
@@ -107,9 +119,7 @@ Both the header structure and body structure are required in each form in order 
 </head>
 ```
 
-
-
-### Body (Form)
+### Body Structure (Form)
 
 ```html
 <body>
@@ -165,10 +175,9 @@ Both the header structure and body structure are required in each form in order 
       </div>
     </div>
   </form>
-
 ```
 
-### Body (Thank You Modal)
+### Body Structure (Thank You Modal)
 
 ```html
     <!-- Thank You Modal -->
@@ -190,45 +199,54 @@ Both the header structure and body structure are required in each form in order 
 </html>
 ```
 
-### Advanced styling
+---
 
-Using Tailwind CSS enables faster forms due to the CSS being hosted externally.
+## Advanced Styling with Tailwind CSS
 
-1. Typography
-   - Use `font-roboto` for consistent font family
-   - Headers: `font-medium` (500 weight)
-   - Body: `font-normal` (400 weight)
+Using Tailwind CSS enables faster forms due to external hosting.
 
-2. Colors
-   - Brand color: `text-brand` or `bg-brand`
-   - Background: `bg-gray-50` for form background
-   - Text: `text-gray-900` for primary text
-   - Secondary text: `text-gray-500`
+### Typography Guidelines
 
-3. Spacing
-   - Container padding: `p-8`
-   - Between fields: `mb-4`
-   - Section spacing: `mb-8`
+- Use `font-roboto` for consistent font family
+- Headers: `font-medium` (500 weight)
+- Body: `font-normal` (400 weight)
 
-4. Layout
-   - Container width: `max-w-3xl`
-   - Center alignment: `mx-auto`
-   - Responsive padding: `px-4 sm:px-6 lg:px-8`
+### Color System
 
-     
-### Accessibility
+- Brand color: `text-brand` or `bg-brand`
+- Background: `bg-gray-50` for form background
+- Text: `text-gray-900` for primary text
+- Secondary text: `text-gray-500`
 
-All forms should include required accessibility code to support those using assistive technologies to read and fill out forms.
+### Spacing Conventions
 
-- **Label every field clearly:** Use `<label>` elements linked to inputs via `for` and `id` attributes.
-- **Keyboard navigation:** Ensure all interactive elements (fields, buttons, checkboxes) are reachable and usable via Tab/Shift+Tab.
-- **ARIA roles and attributes:** Use ARIA attributes (e.g., `aria-required`, `aria-label`, `aria-describedby`) for custom controls or when native semantics are missing.
-- **Error messages:** Make error messages visible to screen readers (e.g., use `aria-live="polite"` on error containers).
-- **Contrast and focus:** Use sufficient color contrast and clear focus indicators for all controls.
-- **Group related fields:** Use `<fieldset>` and `<legend>` for related groups (e.g., consent checkboxes).
-- **Accessible submit button:** Ensure the submit button is a `<button>` or `<input type="submit">` and is clearly labeled.
+- Container padding: `p-8`
+- Between fields: `mb-4`
+- Section spacing: `mb-8`
 
-#### Accessibility Example: Required Field with Error Handling
+### Layout Standards
+
+- Container width: `max-w-3xl`
+- Center alignment: `mx-auto`
+- Responsive padding: `px-4 sm:px-6 lg:px-8`
+
+---
+
+## Accessibility Requirements
+
+All forms should include proper accessibility features:
+
+### Core Principles
+
+- **Label every field clearly**: Use `<label>` elements linked to inputs via `for` and `id` attributes
+- **Keyboard navigation**: Ensure all interactive elements are reachable via Tab/Shift+Tab
+- **ARIA roles**: Use appropriate attributes (`aria-required`, `aria-label`, `aria-describedby`)
+- **Error messages**: Make visible to screen readers (`aria-live="polite"`)
+- **Contrast and focus**: Sufficient color contrast and clear focus indicators
+- **Group related fields**: Use `<fieldset>` and `<legend>` for groups
+- **Accessible buttons**: Use `<button>` or `<input type="submit">` with clear labels
+
+### Example: Required Field with Error Handling
 
 ```html
 <div class="mb-4"
@@ -253,7 +271,7 @@ All forms should include required accessibility code to support those using assi
 </div>
 ```
 
-#### Accessibility Example: Checkbox Group with Fieldset
+### Example: Checkbox Group with Fieldset
 
 ```html
 <fieldset class="mb-6">
@@ -294,28 +312,26 @@ All forms should include required accessibility code to support those using assi
 </fieldset>
 ```
 
-#### Accessibility Checklist
-
-When creating or reviewing forms, ensure:
+### Accessibility Checklist
 
 - [ ] All form fields have associated `<label>` elements
-- [ ] Required fields are marked with `aria-required="true"` and visual indicators
-- [ ] Form can be completed using only keyboard (Tab, Shift+Tab, Enter, Space)
-- [ ] Focus indicators are visible on all interactive elements
+- [ ] Required fields marked with `aria-required="true"`
+- [ ] Form completable using keyboard only
+- [ ] Visible focus indicators on all interactive elements
 - [ ] Error messages use `role="alert"` and `aria-live="polite"`
-- [ ] Color contrast meets WCAG 2.1 AA standards (4.5:1 for normal text)
-- [ ] Related form controls are grouped with `<fieldset>` and `<legend>`
-- [ ] Form validates and provides clear, accessible error feedback
+- [ ] Color contrast meets WCAG 2.1 AA (4.5:1 for normal text)
+- [ ] Related controls grouped with `<fieldset>` and `<legend>`
+- [ ] Clear, accessible error feedback
 
 ---
 
-## Common Issues & Troubleshooting
+## Common Technical Issues
 
-### Modal doesn't close when clicking Close button
+### Modal Doesn't Close
 
-**Problem:** The thank you modal appears after form submission but doesn't close when clicking the Close button.
+**Problem**: Thank you modal doesn't close when clicking Close button.
 
-**Solution:** Ensure the `closeThankYouModal()` JavaScript function is included in your HTML before the closing `</body>` tag:
+**Solution**: Ensure the JavaScript function is included:
 
 ```html
 <script>
@@ -323,100 +339,53 @@ When creating or reviewing forms, ensure:
     document.getElementById('thankYouModal').classList.add('hidden');
   }
 </script>
-</body>
-</html>
 ```
 
-### Form doesn't submit to Dynamics 365
+### Form Doesn't Submit to D365
 
-**Problem:** Form appears to submit but data doesn't appear in Dynamics 365 CRM.
+**Causes**:
 
-**Possible causes and solutions:**
+1. **Incorrect target audience/properties**
+   - Verify `data-targetaudience` is `contact` or `lead`
+   - Check `data-targetproperty` matches exact logical names (case-sensitive)
 
-1. **Incorrect target audience or properties**
-   - Verify `data-targetaudience` is set to either `contact` or `lead`
-   - Check that `data-targetproperty` values match the exact logical names in your CRM (case-sensitive)
-   - Example: `data-targetproperty="emailaddress1"` not `data-targetproperty="email"`
-
-2. **Missing required Dynamics 365 meta tags**
-   - Ensure these meta tags are in your `<head>` section:
+2. **Missing D365 meta tags**
    ```html
    <meta type="xrm/designer/setting" name="type" value="marketing-designer-content-editor-document">
    <meta type="xrm/designer/setting" name="layout-editable" value="marketing-designer-layout-editable">
    ```
 
-3. **Form not properly saved in D365**
-   - After pasting HTML, save the form in Dynamics 365
-   - Go live with the form before testing
-   - Check form status is "Live" not "Draft"
+3. **Form not published**
+   - Status must be "Live" not "Draft"
 
-### Styling doesn't appear or looks broken
+### Styling Broken
 
-**Problem:** Form displays without styling or with broken layout.
+**Causes**:
 
-**Solutions:**
-
-1. **Tailwind CSS not loading**
-   - Verify the Tailwind CDN script is in your `<head>`:
+1. **Tailwind not loading**
    ```html
    <script src="https://cdn.tailwindcss.com"></script>
    ```
-   - Check browser console for script loading errors
-   - Ensure you have internet connectivity (Tailwind loads from CDN)
 
-2. **Custom configuration not applied**
-   - Verify the Tailwind configuration script is after the CDN script
-   - Check for JavaScript syntax errors in the config block
+2. **Configuration errors**: Check JavaScript syntax in config block
 
-### Custom fields not appearing in CRM
+### Custom Fields Not Mapping
 
-**Problem:** Custom fields in the form don't map to CRM fields.
+**Solution**:
 
-**Solution:**
+1. Find logical name in D365: Settings > Customizations > Entities > Fields
+2. Use exact name in `data-targetproperty`
 
-1. **Find the correct logical name in Dynamics 365:**
-   - Navigate to Settings > Customizations > Customize the System
-   - Select Entities > Contact (or Lead) > Fields
-   - Find your field and note the exact "Name" value (this is the logical name)
+**Common logical names**:
+- Email: `emailaddress1`
+- Phone: `telephone1` or `mobilephone`
+- Company: `companyname`
 
-2. **Update the form HTML:**
-   ```html
-   <div data-editorblocktype="TextFormField"
-        data-targetaudience="contact"
-        data-targetproperty="your_exact_logical_name">
-   ```
+### Validation Errors Not Showing
 
-3. **Common logical name examples:**
-   - Email: `emailaddress1`
-   - First Name: `firstname`
-   - Last Name: `lastname`
-   - Phone: `telephone1` or `mobilephone`
-   - Company: `companyname`
-
-### Validation errors not showing
-
-**Problem:** When a required field is empty, no error message appears.
-
-**Solution:** Add custom error handling with JavaScript and ARIA live regions:
+**Solution**: Add JavaScript error handling:
 
 ```html
-<div class="mb-4">
-  <label for="email" class="block text-gray-800 text-sm font-medium mb-2">
-    Email <span class="text-red-600">*</span>
-  </label>
-  <input
-    id="email"
-    type="email"
-    name="emailaddress1"
-    required
-    aria-required="true"
-    aria-describedby="email-error"
-    class="w-full p-3 border border-gray-300 rounded-lg">
-  <span id="email-error" class="hidden text-red-600 text-sm mt-1" role="alert">
-    Please enter a valid email address
-  </span>
-</div>
-
 <script>
   document.querySelector('form').addEventListener('submit', function(e) {
     const email = document.getElementById('email');
@@ -432,27 +401,21 @@ When creating or reviewing forms, ensure:
 </script>
 ```
 
-### Newsletter consent checkbox not tracking
+### Newsletter Consent Not Tracking
 
-**Problem:** Consent checkbox doesn't register subscription in Dynamics 365.
-
-**Solution:** Ensure the checkbox uses the correct `name` attribute format:
+**Solution**: Use correct format:
 
 ```html
 <input
   type="checkbox"
-  id="consentCheckbox"
   name="msdynmkt_topicid;channels;optinwhenchecked"
   value="YOUR-TOPIC-ID;Email;true">
 ```
 
-- Replace `YOUR-TOPIC-ID` with your actual Dynamics 365 topic/subscription list ID
-- Find topic ID in D365: Marketing > Subscription centers > Topics
-- Format: `{topic-guid};{channel};{opt-in-value}`
+Find topic ID: Marketing > Subscription centers > Topics
 
 ---
 
+## Credits
 
-### Credits
-
-This documentation has been re-written from: https://learn.microsoft.com/en-gb/dynamics365/customer-insights/journeys/custom-template-attributes?WT.mc_id=DX-MVP-5003395
+Documentation rewritten from: [Microsoft Learn - Custom Template Attributes](https://learn.microsoft.com/en-gb/dynamics365/customer-insights/journeys/custom-template-attributes?WT.mc_id=DX-MVP-5003395)

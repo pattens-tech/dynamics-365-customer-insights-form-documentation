@@ -47,6 +47,7 @@ Quick reference and troubleshooting:
 
 - **[FAQ](reference/faq.md)** - Frequently asked questions
 - **[Troubleshooting](reference/troubleshooting.md)** - Common issues and solutions
+- **[Technical Reference](reference/technical-reference.md)** - Form structure, elements, and implementation details
 
 ---
 
@@ -62,6 +63,7 @@ Quick reference and troubleshooting:
 | Connect existing form to D365 | [Form Capture](guides/form-capture.md) |
 | Fix submission issues | [Troubleshooting](reference/troubleshooting.md) |
 | Create reusable templates | [Create Form Templates](how-to/create-form-templates.md) |
+| Understand form structure | [Technical Reference](reference/technical-reference.md) |
 
 ### Key Concepts
 

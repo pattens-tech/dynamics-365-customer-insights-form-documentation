@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Getting Started (beginner-friendly tutorials)
   - Guides (comprehensive how-to guides)
   - How-To (task-specific solutions)
-  - Reference (FAQs and troubleshooting)
+  - Reference (FAQs, troubleshooting, and technical documentation)
 
 #### Getting Started
 - **Overview** - Introduction to D365 forms, security features, and best practices
@@ -34,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Reference
 - **FAQ** - 30+ frequently asked questions with detailed answers
 - **Troubleshooting** - Comprehensive troubleshooting guide with solutions
+- **Technical Reference** - In-depth form structure, element types, field properties, and implementation details
 
 #### Content Improvements
 - Consolidated scattered FAQs from original docs
@@ -58,6 +59,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 | `customize-d365-form-doc-form-capture.md` | `guides/form-capture.md` | Enhanced with detailed examples |
 | `customize-d365-form-doc-submission-images.md` | `how-to/customize-submission-images.md` | Reformatted for clarity |
 | `customize-d365-form-doc-form-troubleshooting.md` | `reference/troubleshooting.md` | Significantly expanded |
+| `Technical.md` | `reference/technical-reference.md` | Reorganized with improved structure and formatting |
 | FAQs from multiple files | `reference/faq.md` | Consolidated all FAQs |
 
 ---
