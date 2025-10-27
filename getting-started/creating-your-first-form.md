@@ -49,8 +49,8 @@ Every form requires a submit button for validation and submission processing.
 2. Copy the form embed code or capture script
 3. Add it to your website or landing page
 
-## Next Steps
+## Related Resources
 
-- Learn about [styling forms](../guides/styling-forms.md)
-- Set up [form capture](../guides/form-capture.md) for existing forms
-- Create [reusable templates](../how-to/create-form-templates.md)
+- [Styling Forms](../guides/styling-forms.md)
+- [Form Capture](../guides/form-capture.md)
+- [Create Form Templates](../how-to/create-form-templates.md)

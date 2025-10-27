@@ -80,7 +80,7 @@ fieldMapping: {
 
 Your domain must be enabled for external form hosting in **Settings > Domain Authentication**.
 
-## Next Steps
+## Related Resources
 
-- [Troubleshooting](../reference/troubleshooting.md) common issues
-- Review [FAQ](../reference/faq.md)
+- [Troubleshooting Guide](../reference/troubleshooting.md)
+- [FAQ](../reference/faq.md)

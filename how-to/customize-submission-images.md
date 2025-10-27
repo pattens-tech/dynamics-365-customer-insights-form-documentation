@@ -70,7 +70,7 @@ Place this JavaScript below your form embed script on your website.
 - PNG with transparency looks professional
 - Test with `#d365mkt-nocache` first
 
-## Related Guides
+## Related Resources
 
 - [Styling Forms](../guides/styling-forms.md)
 - [Advanced Customization](../guides/advanced-customization.md)

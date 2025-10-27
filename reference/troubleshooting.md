@@ -89,6 +89,95 @@ Before diving into specific issues:
 
 **Solution**: Enable in Settings > Feature switches > Forms
 
+## Technical Implementation Issues
+
+### Modal Doesn't Close
+
+**Problem**: Thank you modal doesn't close when clicking Close button.
+
+**Solution**: Ensure the JavaScript function is included:
+
+```html
+<script>
+  function closeThankYouModal() {
+    document.getElementById('thankYouModal').classList.add('hidden');
+  }
+</script>
+```
+
+### Form Doesn't Submit to D365
+
+**Causes**:
+
+1. **Incorrect target audience/properties**
+   - Verify `data-targetaudience` is `contact` or `lead`
+   - Check `data-targetproperty` matches exact logical names (case-sensitive)
+
+2. **Missing D365 meta tags**
+   ```html
+   <meta type="xrm/designer/setting" name="type" value="marketing-designer-content-editor-document">
+   <meta type="xrm/designer/setting" name="layout-editable" value="marketing-designer-layout-editable">
+   ```
+
+3. **Form not published**
+   - Status must be "Live" not "Draft"
+
+### Styling Broken
+
+**Causes**:
+
+1. **Tailwind not loading**
+   ```html
+   <script src="https://cdn.tailwindcss.com"></script>
+   ```
+
+2. **Configuration errors**: Check JavaScript syntax in config block
+
+### Custom Fields Not Mapping
+
+**Solution**:
+
+1. Find logical name in D365: Settings > Customizations > Entities > Fields
+2. Use exact name in `data-targetproperty`
+
+**Common logical names**:
+- Email: `emailaddress1`
+- Phone: `telephone1` or `mobilephone`
+- Company: `companyname`
+
+### Validation Errors Not Showing
+
+**Solution**: Add JavaScript error handling:
+
+```html
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    const email = document.getElementById('email');
+    const error = document.getElementById('email-error');
+
+    if (!email.validity.valid) {
+      error.classList.remove('hidden');
+      e.preventDefault();
+    } else {
+      error.classList.add('hidden');
+    }
+  });
+</script>
+```
+
+### Newsletter Consent Not Tracking
+
+**Solution**: Use correct format:
+
+```html
+<input
+  type="checkbox"
+  name="msdynmkt_topicid;channels;optinwhenchecked"
+  value="YOUR-TOPIC-ID;Email;true">
+```
+
+Find topic ID: Marketing > Subscription centers > Topics
+
 ## Getting Help
 
 ### Browser Console

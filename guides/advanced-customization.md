@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-## Next Steps
+## Related Resources
 
-- Review [troubleshooting guide](../reference/troubleshooting.md)
-- Learn about [form capture](form-capture.md)
+- [Troubleshooting Guide](../reference/troubleshooting.md)
+- [Form Capture](form-capture.md)
